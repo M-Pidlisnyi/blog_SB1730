@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    список категорій
-    {% for c in categories_list %}
-        <p>
-            {{ c }}
-        </p>
-    {% endfor %}
+<hr>
+    <div class="card">
+        <div class="card-header">
+            Cписок категорій
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for c in categories_list %}
+                <li class="list-group-item">
+                    <a href="/post/category/{{c[0]}}" class="nav-link"> {{ c[1] }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 
 {% endblock %}

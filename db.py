@@ -28,5 +28,19 @@ def getPosts():
     close()
     return result
 
+def getPostsInCategory(id):
+    open()
+    cursor.execute( "SELECT * FROM post WHERE category_id == ?", [id] )
+    result = cursor.fetchall()
+    close()
+    return result    
+
+def getCategoryById(id):
+    open()
+    cursor.execute( "SELECT name FROM category WHERE id == ?", [id] )
+    result = cursor.fetchone()
+    close()
+    return result    
+
 
 

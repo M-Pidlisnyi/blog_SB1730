@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Категорія {{ category_name }}</h4>
+{% for post in posts_list  %}
+    <p>
+        {{ post }}
+    </p>
+{% endfor %}
+
+{% endblock %}
