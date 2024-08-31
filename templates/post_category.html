@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    список категорій
+    {% for c in categories_list %}
+        <p>
+            {{ c }}
+        </p>
+    {% endfor %}
+
+{% endblock %}
