@@ -3,10 +3,15 @@
 {% block content %}
 
     список всіх постів
-    {% for post in posts_list  %}
-        <p>
-            {{ post }}
-        </p>
-    {% endfor %}
+    <div class="posts-list">
+        <ul class="list-group">
+            {% for post in posts_list  %}
+                <li class="list-group-item">
+                    {{ post[2] }}
+                    <span class="date"> {{ post[3] }} </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 
 {% endblock %}

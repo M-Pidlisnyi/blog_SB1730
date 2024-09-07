@@ -3,10 +3,27 @@
 {% block content %}
 
 <h4>Категорія {{ category_name }}</h4>
-{% for post in posts_list  %}
-    <p>
-        {{ post }}
-    </p>
-{% endfor %}
+
+<div class="posts-list">
+    <ul class="list-group">
+        {% for post in posts_list  %}
+            <li class="list-group-item">
+                {{ post[2] }}
+                <span class="date"> {{ post[3] }} </span>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<hr>
+<div class="mb-3">
+    <form method="post" >
+        <label for="text" class="form-label" >Введіть текст нового поста</label>
+        <textarea type="text" name="text" id="text" class="form-control"> </textarea>
+        <input type="submit" value="Створити пост" class="btn btn-success">
+    </form>
+</div>
+
+
+
 
 {% endblock %}
