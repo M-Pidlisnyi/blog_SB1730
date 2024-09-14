@@ -34,9 +34,9 @@ def post_view():
     return render_template("post_view.html",
                            posts_list = db.getPosts())
 
-@app.route("/about")
-def about():
-    return render_template("base.html")
-
+@app.route("/post/delete/<id>")
+def delete_post(id):
+    db.deletePost(id)
+    return redirect("/post/view")
 
 app.run(debug=True, host="0.0.0.0")

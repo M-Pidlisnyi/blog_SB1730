@@ -17,3 +17,12 @@ body {
     margin-left: 5%;
     width: 30%;
 }
+.delete{
+    float: right;
+    position: relative;
+    bottom: 25px;
+}
+.delete a {
+    color: red;
+    text-decoration: none;
+}

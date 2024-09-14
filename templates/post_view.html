@@ -7,7 +7,10 @@
         <ul class="list-group">
             {% for post in posts_list  %}
                 <li class="list-group-item">
-                    {{ post[2] }}
+                    <p>{{ post[2] }}</p>
+                    <span class="delete"> 
+                        <a href="/post/delete/{{post[0]}}">X</a> 
+                    </span>
                     <span class="date"> {{ post[3] }} </span>
                 </li>
             {% endfor %}
