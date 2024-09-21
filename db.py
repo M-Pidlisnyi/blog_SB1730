@@ -54,3 +54,11 @@ def deletePost(id):
     cursor.execute("DELETE FROM post WHERE id == ?", [id])
     conn.commit()
     close()
+
+
+def getPost(id):
+    open()
+    cursor.execute("SELECT * FROM post WHERE id == ?", [id])
+    result = cursor.fetchone()
+    close()
+    return result

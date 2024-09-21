@@ -39,4 +39,10 @@ def delete_post(id):
     db.deletePost(id)
     return redirect("/post/view")
 
+
+@app.route("/post/view/<id>")
+def single_post(id):
+    return render_template("single_post.html",
+                           post = db.getPost(id))
+
 app.run(debug=True, host="0.0.0.0")

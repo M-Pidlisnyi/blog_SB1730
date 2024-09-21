@@ -7,10 +7,12 @@
 <div class="posts-list">
     <ul class="list-group">
         {% for post in posts_list  %}
+        <a href="/post/view/{{post[0]}}">
             <li class="list-group-item">
                 {{ post[2] }}
                 <span class="date"> {{ post[3] }} </span>
             </li>
+        </a>
         {% endfor %}
     </ul>
 </div>
